@@ -1,0 +1,60 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.3.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    minifyEnabled = false
+    compileSdkVersion = 22
+    buildToolsVersion = '23.0.0 rc3'
+    minSdkVersion = 14
+    targetSdkVersion = 22
+
+    def supportVersion = '22.2.0'
+    SupportAnnotation = 'com.android.support:support-annotations:' + supportVersion;
+    SupportV4 = 'com.android.support:support-v4:' + supportVersion;
+    SupportV7 = 'com.android.support:appcompat-v7:' + supportVersion;
+    SupportV13 = 'com.android.support:v13:' + supportVersion;
+    SupportDesign = 'com.android.support:design:' + supportVersion;
+    SupportV7RecyclerView = 'com.android.support:recyclerview-v7:' + supportVersion;
+    // Guava: Google Core Libraries for Java
+    // The Guava project contains several of Google's core libraries that we rely on
+    // in our Java-based projects: collections, caching, primitives support, concurrency
+    // libraries, common annotations, string processing, I/O, and so forth.
+    // Requires JDK 1.6 or higher (as of 12.0).
+    Guava = 'com.google.guava:guava:18.0'
+    Jsr305 = 'com.google.code.findbugs:jsr305:3.0.0'
+    Gson = 'com.google.code.gson:gson:2.3.1'
+
+    JacksonCore = 'com.fasterxml.jackson.core:jackson-core:2.5.4'
+    JacksonDatabind = 'com.fasterxml.jackson.core:jackson-databind:2.5.4'
+    JacksonAnnotations = 'com.fasterxml.jackson.core:jackson-annotations:2.5.4'
+
+    GoogleAnalytics = 'com.google.android.gms:play-services-analytics:7.0.0'
+
+    // Okio is a new library that complements java.io and java.nio to make it much
+    // easier to access, store, and process your data.
+    Okio = 'com.squareup.okio:okio:1.5.0'
+
+    // An HTTP & SPDY client for Android and Java applications.
+    // http://square.github.io/okhttp/
+    OkHttp = 'com.squareup.okhttp:okhttp:2.4.0'
+
+    OkHttpAndroidSupport = 'com.squareup.okhttp:okhttp-android-support:2.4.0'
+
+}

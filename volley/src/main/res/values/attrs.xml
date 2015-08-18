@@ -1,0 +1,16 @@
+<resources>
+    <declare-styleable name="CacheImageView">
+        <attr name="shouldAnimate" format="boolean"/>
+        <attr name="animateDuration" format="reference"/>
+        <attr name="defaultImage" format="reference"/>
+        <attr name="errorImage" format="reference"/>
+        <attr name="gifEnabled" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="CachePhotoView">
+        <attr name="zoomable" format="boolean"/>
+        <attr name="minimumScale" format="float"/>
+        <attr name="medimumScale" format="float"/>
+        <attr name="maximumScale" format="float"/>
+        <attr name="allowParentInterceptOnEdge" format="boolean"/>
+    </declare-styleable>
+</resources>

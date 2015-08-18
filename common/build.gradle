@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled rootProject.ext.minifyEnabled
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile rootProject.ext.SupportAnnotation
+    compile rootProject.ext.GoogleAnalytics
+
+    compile rootProject.ext.SupportV4
+    compile rootProject.ext.SupportV7
+    compile rootProject.ext.SupportDesign
+
+    compile rootProject.ext.Okio
+    compile rootProject.ext.OkHttp
+
+    compile rootProject.ext.Gson
+    compile rootProject.ext.JacksonCore
+}
